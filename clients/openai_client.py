@@ -28,7 +28,8 @@ class OpenAIClient:
         screenshot_path: str,
         system_prompt: str,
         user_prompt: str,
-        previous_steps: str
+        previous_steps: str,
+        user_feedback: str,
     ) -> str:
         """
         Calls the chosen OpenAI model to get the next suggested step in JSON form.
@@ -42,7 +43,7 @@ class OpenAIClient:
 
         # Base64 encode the screenshot, in case you're using a vision model
         base64_image = encode_image(screenshot_path)
-
+        last_3_steps = "\n".join(previous_steps.split("\n")[-3:])
         # Build the user message (with text + image data). 
         # If you do NOT have GPT-4 Vision, pass a text description instead of base64 data.
         user_content = [
@@ -50,7 +51,9 @@ class OpenAIClient:
                 "type": "text",
                 "text": (
                     f"{user_prompt}\n"
-                    f"Previous Steps:\n{previous_steps}\n"
+                    f"Previous completed steps on the current device:\n{previous_steps}\n"
+                    f"Last 3 Actions:\n{last_3_steps}\n"
+                    f"User Feedback on previous steps:\n{user_feedback}"
                     "Analyze this image and provide the next important step as minimal JSON."
                 )
             },
