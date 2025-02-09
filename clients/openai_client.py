@@ -52,9 +52,8 @@ class OpenAIClient:
                 "text": (
                     f"{user_prompt}\n"
                     f"Previous completed steps on the current device:\n{previous_steps}\n"
-                    f"Last 3 Actions:\n{last_3_steps}\n"
-                    f"User Feedback on previous steps:\n{user_feedback}"
                     "Analyze this image and provide the next important step as minimal JSON."
+                    f"User Feedback on previous steps:\n{user_feedback}"
                 )
             },
             {

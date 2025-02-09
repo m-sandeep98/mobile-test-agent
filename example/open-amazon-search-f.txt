@@ -1,0 +1,5 @@
+CLICK Amazon icon
+CLICK search bar
+CLICK macbook
+CLICK Add to cart
+CLICK Cart icon

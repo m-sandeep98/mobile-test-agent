@@ -4,7 +4,7 @@ system_prompt = (
                 "{\"action\":\"<click|scroll|type|system>\",\"desc\":\"<3-4 words>\"}.\n"
                 "No code fences or markdown. No extra text.\n"
                 "Supported actions: click, scroll, type.\n"
-                "desc must be 1-4 words max. Can contain any attribute like color, type, etc. Make sure it is distinctive.\n"
+                "desc must be 1-4 words max. Can contain any attribute like color, type, etc. Make sure it is distinctive if there are multiple such items.\n"
                 "For scroll, desc should be 'up', 'down', 'left', or 'right', and a new json key 'start_from' should specify the exact element desc of the scroll start position.\n"
                 "In cases of type, the desc should be a mock value based on the field.\n"
                 "Use the provided list of previous actions and user feedback to decide the next step.\n"
