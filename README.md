@@ -70,4 +70,4 @@ This contains:
 
 ## **Demo**
 
-<iframe src="https://drive.google.com/file/d/1hil-XaEwyV64rydFbNzpfxTxYqLoqp6w/preview" width="640" height="480" allow="autoplay"></iframe>
+https://drive.google.com/file/d/1hil-XaEwyV64rydFbNzpfxTxYqLoqp6w/preview 
